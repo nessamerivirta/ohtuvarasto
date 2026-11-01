@@ -72,7 +72,7 @@ class TestVarasto(unittest.TestCase):
 
     def test_negatiivinen_lisaaminen(self):
         self.varasto.lisaa_varastoon(-2)
-        self.assertAlmostEqual(self.varasto.saldo, 0)
+        self.assertAlmostEqual(self.varasto.saldo, 1)
 
     def test_varaston_merkkijono(self):
         self.assertEqual(str(self.varasto), "saldo = 0, vielä tilaa 10")
