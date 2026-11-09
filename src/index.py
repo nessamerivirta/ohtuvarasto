@@ -1,10 +1,7 @@
 from varasto import Varasto
 
 
-def main():
-    mehua = Varasto(100.0)
-    olutta = Varasto(100.0, 20.2)
-
+def luonti_ja_getterit(mehua, olutta):
     print("Luonnin jälkeen:")
     print(f"Mehuvarasto: {mehua}")
     print(f"Olutvarasto: {olutta}")
@@ -14,6 +11,8 @@ def main():
     print(f"tilavuus = {olutta.tilavuus}")
     print(f"paljonko_mahtuu = {olutta.paljonko_mahtuu()}")
 
+
+def mehun_muokkaus(mehua):
     print("Mehu setterit:")
     print("Lisätään 50.7")
     mehua.lisaa_varastoon(50.7)
@@ -22,6 +21,8 @@ def main():
     mehua.ota_varastosta(3.14)
     print(f"Mehuvarasto: {mehua}")
 
+
+def virheelliset_varastot():
     print("Virhetilanteita:")
     print("Varasto(-100.0);")
     huono = Varasto(-100.0)
@@ -31,6 +32,8 @@ def main():
     huono = Varasto(100.0, -50.7)
     print(huono)
 
+
+def virheelliset_lisaykset(mehua, olutta):
     print(f"Olutvarasto: {olutta}")
     print("olutta.lisaa_varastoon(1000.0)")
     olutta.lisaa_varastoon(1000.0)
@@ -41,28 +44,29 @@ def main():
     mehua.lisaa_varastoon(-666.0)
     print(f"Mehuvarasto: {mehua}")
 
+
+
+def virheelliset_otot(mehua, olutta):
     print(f"Olutvarasto: {olutta}")
     print("olutta.ota_varastosta(1000.0)")
-    saatiin = olutta.ota_varastosta(1000.0)
-    print(f"saatiin {saatiin}")
+    print(f"saatiin {olutta.ota_varastosta(1000.0)}")
     print(f"Olutvarasto: {olutta}")
 
     print(f"Mehuvarasto: {mehua}")
     print("mehua.otaVarastosta(-32.9)")
-    saatiin = mehua.ota_varastosta(-32.9)
-    print(f"saatiin {saatiin}")
+    print(f"saatiin {mehua.ota_varastosta(-32.9)}")
     print(f"Mehuvarasto: {mehua}")
 
-def breaking_the_code(a, b, c, d, e):
-    print("ngfoirtgreiognrnteörntoiitr")
-    if a:
-        if b:
-            print(a + b)
-    x = 1
-    y = 2
-    z = 3
-    return x + y + z
-    
+
+def main():
+    mehua = Varasto(100.0)
+    olutta = Varasto(100.0, 20.2)
+
+    luonti_ja_getterit(mehua, olutta)
+    mehun_muokkaus(mehua)
+    virheelliset_varastot()
+    virheelliset_lisaykset(mehua, olutta)
+    virheelliset_otot(mehua, olutta)
 
 
 if __name__ == "__main__":
