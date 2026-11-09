@@ -53,21 +53,14 @@ def main():
     print(f"saatiin {saatiin}")
     print(f"Mehuvarasto: {mehua}")
 
-def breaking_the_code(a, b, c, d, e, f):
-    print("ngfoirtgreiognrnteörntoiitreoighroteigeöorgnrögtrntrögntrögitenrigjtroiejgrtoeigteoögjrteogtgerget")
+def breaking_the_code(a, b, c, d, e):
+    print("ngfoirtgreiognrnteörntoiitr")
     if a:
-         if b:
-            if c:
-                print(b + c)
+        if b:
+            print(a + b)
     x = 1
     y = 2
     z = 3
-    x += 1
-    y += 1
-    z += 1
-    x += 2
-    y += 2
-    z += 2
     return x + y + z
     
 
